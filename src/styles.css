@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.image{
+    width: 250px;
+    height: 250px;
+    margin: 0px 0px 20px 25px;
+    
+}
+
+.product{
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+.description{
+    display: inline-block;
+    max-width: 250px;
+   
+}
+.title{
+    display: block;
+    font-size: 20px;  
+}
+
+.title:hover{
+    color: blue;
+}
+
+
+
+/* bigger laptops */
+@media only screen and (min-width: 1224px) { }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 805px) and (max-width: 1024px) {
+    .image{
+        display: block;
+        max-width:220px !important;
+        max-height:220px !important;
+        width: auto !important;
+        height: auto !important;
+}
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 501px) and (max-width: 800px) {
+    .image{
+        display: block;
+        max-width:200px !important;
+        max-height:195px !important;
+        width: auto !important;
+        height: auto !important;
+        padding-right: 100px !important;
+}
+}
+/* mobiles (landscape and portrait) */
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+    .image{
+        display: block;
+        max-width:50px;
+        max-height:95px;
+        width: auto;
+        height: auto;
+}
+}

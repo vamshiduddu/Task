@@ -1,0 +1,38 @@
+<div *ngIf="products?.length==0">
+  <div class="spinner-border m-5" role="status">
+      <span class="sr-only"></span>
+    </div> 
+</div>
+<div class="product" *ngFor="let product of products">
+  <div class="row mt-3 ">
+    <div class="col-3">
+      <img src="{{product.image}}" class="card-img-top image" style="width: 15rem;"
+        routerLink="/productDetails/{{product.id}}">
+
+    </div>
+    <div class="col-9">
+      <div class="row">
+        <div class="col-lg-8 col-md-6">
+          <p class="title" routerLink="/productDetails/{{product.id}}" (click)="sendToChild(product)">
+            {{product.title}}
+          </p>
+          <p class="rating">{{product.rating.rate}}</p>
+          <p class="description">
+            {{add3Dots(product.description,200)}}
+          </p>
+
+        </div>
+        <div class="col-4">
+          <h6>₹{{product.price}}</h6>
+
+          <button class="btn btn-warning" *ngIf='!productsPresent(product.id)' (click)="addToCart(product)">Add to
+            cart</button>
+          <button class="btn btn-warning" *ngIf='productsPresent(product.id)' routerLink="/cart">Go to cart</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

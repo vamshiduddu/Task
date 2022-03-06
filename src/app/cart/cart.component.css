@@ -1,0 +1,12 @@
+.cart{
+    overflow-x: hidden;
+    border-bottom: 1px solid grey;
+
+}
+.buttons{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
+}
